@@ -11,4 +11,23 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  #get products data 
+  # get "/products", to: "products#index"
+  # #add/create new product 
+  #  post "/products", to: "products#create"
+  #  #get specific product record 
+  #  get "/products/:id", to: "products#show"
+    
+  #  # edit form open krna specific obj ke liye 
+  #   get "/products/:id/edit", to: "products#edit"
+  #   # object parsial update
+  # patch "/products/:id", to: "products#update"
+  # #full object update 
+  # put "/products/:id", to: "products#update"
+
+  # #delete any specific object 
+  # delete "/products/:id", to: "products#destroy"
+    
+  root "products#index"
+   resources :products
 end
