@@ -31,5 +31,8 @@ Rails.application.routes.draw do
   # delete "/products/:id", to: "products#destroy"
     
   root "products#index"
-   resources :products
+   resources :products do
+    resources :subscribers, only: [ :create ]
+  end
+  resource :unsubscribe, only: [ :show ]
 end
